@@ -1,0 +1,13 @@
+This repository contains a trivial program to set the frequency based on the
+demo code at https://www.qrp-labs.com/synth/si5351ademo.html
+
+It has been tested on a Raspberry Pi 4, but will probably work on any Pi or
+similar device.
+
+Some setup is required to enable the I2C peripheral. See
+https://learn.adafruit.com/adafruits-raspberry-pi-lesson-4-gpio-setup/configuring-i2c
+
+The `test` program that is built will set the output frequency to 4 times the
+first command-line argument. The 4x multiplier is intended for driving a
+receiver with a quadrature clock divider, like the QRP Labs receiver:
+https://www.qrp-labs.com/receiver.html
